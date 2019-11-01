@@ -1,0 +1,27 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: fs
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/scf?characterEncoding=UTF8
+    username: root
+    password: 1
+  jpa:
+    database: MySQL
+    show-sql: true
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/jsp/
+    static-path-pattern: static/**
+eureka:
+  client:
+    service-url: #指定Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://127.0.0.1:10086/eureka/
+  instance:
+    prefer-ip-address: true
+jwt:
+  config:
+    key: bawei
